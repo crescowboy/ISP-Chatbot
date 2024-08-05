@@ -1,0 +1,136 @@
+/* styles.module.css */
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.customForm {
+  color: white;
+  background-color: white;
+  max-width: 600px;
+  width: 100%;
+  /* padding: 20px; */
+  border: 1px solid rgb(229, 229, 229);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.customMessageContainer {
+  color: black;
+  max-height: 384px;
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.customItemsMessageContainer{
+  display: flex;
+  align-items: center;
+}
+
+.iconsMessage span{
+  padding: 7px;
+  align-items: center;
+  background-color: aquamarine;
+  font-size: 30px;
+  border-radius: 8px;
+  margin-right: 5px;
+}
+
+.customH2{
+  background-color: black;
+  color: white;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  border-top-left-radius: 10px; 
+  border-top-right-radius: 10px;
+}
+
+.customMessage {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 0.375rem;
+}
+
+.assistantMessage {
+  justify-content: flex-start; /* alinea a la izquierda */
+}
+
+.userMessage {
+  justify-content: flex-end; /* alinea a la derecha */
+}
+
+.customAssistant {
+  align-self: flex-end;
+  background-color: rgb(229, 229, 229);
+  color: black;
+}
+
+.customUser {
+  align-self: flex-start;
+  background-color: black;
+  color: white;
+}
+
+.customMessageRole {
+  font-size: 0.75rem;
+  /* text-align: left; */
+  font-weight: bold;
+}
+
+.customTextareaContainer {
+  display: flex;
+  width: 90%;
+}
+
+.customTextarea {
+  width: 100%;
+  min-width: 0;
+  height: 50px;
+  border: 1px solid rgb(229, 229, 229);
+  background-color: white;
+  color: black;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  outline: none;
+  resize: none;
+}
+
+.customButtonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customButton {
+  background-color: black;
+  color: white;
+  height: 50px;
+  width: 50px;
+  /* padding: 13px 20px; */
+  border-radius: 0.375rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.customButton:disabled {
+  opacity: 0.5;
+}
+
+.customInputsContainers{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
