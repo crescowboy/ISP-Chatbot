@@ -134,3 +134,22 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+
+
+/* styles.module.css */
+.sectionContainer {
+  position: relative; /* Asegúrate de que los elementos hijos se posicionen respecto a este contenedor */
+  z-index: 1; /* Asegúrate de que este zIndex sea mayor que el del fondo de partículas */
+}
+
+.customForm {
+  position: relative; /* Asegúrate de que este elemento también esté por encima */
+  z-index: 2; /* Asegúrate de que este zIndex sea mayor que el del fondo de partículas */
+}
+.customH2{
+  position: relative; /* Asegúrate de que este elemento también esté por encima */
+  z-index: 2;
+}
+
+/* Otros estilos... */
+

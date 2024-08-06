@@ -6,6 +6,8 @@ import styles from './styles.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import FAQ from './components/faq';
+import ParticlesBackground from './components/ParticlesBackground';
+import ParticlesComponent from './components/ParticlesBackground';
 
 const Page = () => {
   const { messages, input, handleInputChange, handleSubmit, append, isLoading } = useChat({
@@ -55,6 +57,7 @@ const Page = () => {
 
   return (
     <section className={styles.sectionContainer}>
+      <ParticlesComponent id="particles"/>
       <div className={styles.customH2}><h2>ISP Chatbot</h2></div>
       
       <form className={styles.customForm} onSubmit={handleSubmit}>
