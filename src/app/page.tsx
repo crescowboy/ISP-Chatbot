@@ -23,22 +23,22 @@ const Page = () => {
         content: 'Hola, si necesito de tu ayuda, no me sirve el internet!'
       },
       {
-        id: 'default-1',
+        id: 'default-3', // Cambié 'default-1' a 'default-3' para asegurar que sea único
         role: 'assistant',
         content: 'Hola, soy tu asistente virtual de ISP. ¿En qué puedo ayudarte hoy?'
       },
       {
-        id: 'default-2',
+        id: 'default-4', // Cambié 'default-2' a 'default-4' para asegurar que sea único
         role: 'user',
         content: 'Hola, si necesito de tu ayuda, no me sirve el internet!'
       },
       {
-        id: 'default-1',
+        id: 'default-5', // Cambié 'default-1' a 'default-5' para asegurar que sea único
         role: 'assistant',
         content: 'Hola, soy tu asistente virtual de ISP. ¿En qué puedo ayudarte hoy?'
       },
       {
-        id: 'default-2',
+        id: 'default-6', // Cambié 'default-2' a 'default-6' para asegurar que sea único
         role: 'user',
         content: 'Hola, si necesito de tu ayuda, no me sirve el internet!'
       },
@@ -49,7 +49,7 @@ const Page = () => {
       }
     ]
   });
-
+  
   const handleSelectQuestion = (question:string, answer:string) =>{
     append({role: 'user', content: question});
     append({role: 'assistant', content: answer});
@@ -67,22 +67,19 @@ const Page = () => {
           {messages
             .filter(m => m.role !== 'system')
             .map((m, index) => (
-              <>
               <div 
                 key={m.id}
                 className={`${styles.customItemsMessageContainer} ${m.role === 'assistant' ? styles.assistantMessage : styles.userMessage}`}
               >
-                  <div
-                    className={`${styles.customMessage} ${m.role === 'assistant' ? styles.customAssistant : styles.customUser}`}
-                    key={m.id}
-                  >
-                    <span className={`${styles.customMessageRole} ${m.role === 'assistant' ? 'text-left' : 'text-right'}`}>
+                <div
+                  className={`${styles.customMessage} ${m.role === 'assistant' ? styles.customAssistant : styles.customUser}`}
+                >
+                  <span className={`${styles.customMessageRole} ${m.role === 'assistant' ? 'text-left' : 'text-right'}`}>
                     {m.role === 'assistant' ? 'Asistente: ' : 'Usuario: '}
-                    </span>
-                    {m.content}
-                  </div>
+                  </span>
+                  {m.content}
+                </div>
               </div>
-              </>
             ))}
         </div>
         <FAQ onSelectQuestion={handleSelectQuestion}/>
